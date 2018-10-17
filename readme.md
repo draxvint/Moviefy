@@ -1,3 +1,3 @@
 # Moviefy - Filmadatbázis
 
-[Wiki & Dokumentáció](../wikis/home)
+[Wiki & Dokumentáció](../../wikis/home)
