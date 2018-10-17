@@ -1,3 +1,4 @@
 # Moviefy - Filmadatbázis
 
-[Wiki & Dokumentáció](/../wikis/home)
+
+Git & Laravel beállítása a [Wiki](/../wikis/home)-ben
