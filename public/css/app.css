@@ -28,6 +28,14 @@ body {
     font-weight: 500;
 }
 
+.navbar-toggler{
+    border: 0;
+}
+
+navbar-toggler:focus {
+    outline: none!important;
+}
+
 /*Movie poster*/
 .movie-item {
     display: inline-block;
