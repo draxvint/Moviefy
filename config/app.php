@@ -173,6 +173,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // other service providers
+
+        'Tmdb\Laravel\TmdbServiceProvider',
+
     ],
 
     /*

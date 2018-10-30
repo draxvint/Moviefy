@@ -1,3 +1,4 @@
+@inject('image', 'Tmdb\Helper\ImageHelper')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

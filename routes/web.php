@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/profile', 'HomeController@index')->name('profile');
+Route::get('/', 'MovieController@index')->name('home');
+
+Route::get('/profile', 'UserController@index')->name('profile');
+
+Route::get('/profile/settings', 'UserController@settings')->name('profile.settings');
+
+Route::get('/movie/{id}', 'MovieController@show')->name('movie.show');
