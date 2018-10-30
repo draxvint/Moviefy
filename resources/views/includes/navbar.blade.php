@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         <div class="d-flex order-0">
-            <a class="navbar-brand mr-1" href="#">Moviefy</a>
+            <a class="navbar-brand mr-1" href="/">Moviefy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,13 +9,10 @@
         <div class="navbar-collapse collapse order-2" id="collapsingNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Böngészés<span class="sr-only">Home</span></a>
+                    <a class="nav-link" href="{{ route('home') }}">Böngészés<span class="sr-only">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="//codeply.com">Filmajánló</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Keresés</a>
+                    <a class="nav-link" href="">Filmajánló</a> <!--TODO Filmajánló route -->
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
