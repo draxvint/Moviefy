@@ -1,0 +1,24 @@
+ID: TP_001
+TestCases: TC01, TC02, TC03, TC04, TC05
+Description: Hírdetés feladás tesztelése
+
+
+ID: TC01
+TP: TP_001
+Description: Ne lehessen szöveg nélkül feladni hírdetést
+
+ID: TC02
+TP: TP_001
+Description: Ne lehessen ár nélkül feladni hírdetést
+
+ID: TC03
+TP: TP_001
+Description: a megadott ár ne lehessen 0 vagy negatív
+
+ID: TC04
+TP: TP_001
+Description: a híredtés szövege legalább 10 karaketer hosszú legyen
+
+ID: TC05
+TP: TP_001
+Description: helyes adatok esetén a rendszer felveszi a hírdetést és visszítér egy sikeres feladás üzenettel
