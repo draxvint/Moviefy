@@ -36,7 +36,7 @@ class User extends Authenticatable
 
     public function subscribedPlaylists()
     {
-        return $this->belongsToMany('App\Playlist');
+        return $this->belongsToMany('App\Playlist','playlist_user','user_id');
     }
 
     public function comments()

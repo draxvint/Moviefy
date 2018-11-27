@@ -12,11 +12,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <form>
+                        <form method="post" action="{{route('profile')}}">
+                            @csrf
                             <div class="form-group row">
                                 <label for="name" class="col-4 col-form-label">Név</label>
                                 <div class="col-8">
-                                    <input id="name" name="name" placeholder="Név" class="form-control here" type="text">
+                                    <input value="{{Auth::user()->name}}" id="name" name="name" placeholder="Név" class="form-control here" type="text">
                                 </div>
                             </div>
 
@@ -25,7 +26,7 @@
                             <div class="form-group row">
                                 <label for="email" class="col-4 col-form-label">Email*</label>
                                 <div class="col-8">
-                                    <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
+                                    <input value="{{Auth::user()->email}}" id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
                                 </div>
                             </div>
 
