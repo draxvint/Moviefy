@@ -6,6 +6,7 @@
 
 
 @section('content')
+<!-- Tönköly Andor készítette -->
     <div class="container">
 
         <div class="d-flex align-content-center justify-content-around flex-wrap">
@@ -33,5 +34,5 @@
         </div>
 
     </div>
-
+<!-- END Tönköly Andor -->
 @endsection

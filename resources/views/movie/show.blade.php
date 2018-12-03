@@ -46,6 +46,28 @@
 
 
         </div>
+        @if($user_playlists)
+        <div class="row">
+            <form method="post" action="{{route('playlist.addMovie')}}">
+                @csrf
+
+                <div class="input-group">
+                    <select class="custom-select" id="inputGroupSelect04" >
+                        <option selected>Choose...</option>
+                        @foreach($user_playlists as $playlist )
+                        <option values='{{$playlist->id}}'>{{$playlist->name}}</option>
+                        @endforeach
+                    </select>
+                    <input type="hidden" name="movie" value="{{$movie->getId()}}">
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit">Hozzáadás</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        @endif
     </div>
 @endsection
 

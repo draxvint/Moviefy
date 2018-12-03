@@ -17,6 +17,11 @@ class Movie extends Model
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at', 'release_date'];
 
+    function __construct($tmdbid )
+    {
+        //TODO Movie constructort megirni
+    }
+
     public function playlists()
     {
         return $this->belongsToMany('App\Playlist');
