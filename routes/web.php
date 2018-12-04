@@ -27,5 +27,14 @@ Route::get('/movie/{id}', 'MovieController@show')->name('movie.show');
 
 Route::get('/playlists', 'PlaylistController@index')->name('playlist.index');
 
-Route::get('/playlists/{id}', 'PlaylistController@show')->name('playlist.show');
+Route::get('/playlist/create', 'PlaylistController@create')->name('playlist.create');
+
+Route::post('/playlist/create', 'PlaylistController@store')->name('playlist.store');
+
+Route::post('/playlist/add', 'PlaylistController@addMovie')->name('playlist.addMovie');
+
+Route::get('/playlist/{id}', 'PlaylistController@show')->name('playlist.show');
+
+
+
 
