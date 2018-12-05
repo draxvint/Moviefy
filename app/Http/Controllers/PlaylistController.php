@@ -41,6 +41,9 @@ class PlaylistController extends Controller
 
     public function addMovie(Request $request)
     {
+        if(!$request->filled('playlist')){
+            return Redirect::back()->with('error', "Nincs kiválasztva lejátszási lista");
+        }
         $playlist = Playlist::find($request['playlist']);
         if (!Movie::find($request['movie'])){
             $movie = new Movie();

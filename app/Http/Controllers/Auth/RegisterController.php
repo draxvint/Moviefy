@@ -71,7 +71,6 @@ class RegisterController extends Controller
         $user->save();
         $playlist = new Playlist();
         $playlist->name = "Kedvencek";
-        $playlist->save();
         $user->playlists()->save($playlist);
         return $user;
     }

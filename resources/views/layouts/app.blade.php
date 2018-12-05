@@ -52,6 +52,11 @@
                     {{ session()->get('message') }}
                 </div>
             @endif
+                @if(session()->has('error'))
+                    <div class="alert alert-warning">
+                        {{ session()->get('error') }}
+                    </div>
+                @endif
             @yield('content')
         </main>
 
