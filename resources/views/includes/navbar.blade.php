@@ -12,18 +12,21 @@
                     <a class="nav-link" href="{{ route('home') }}">Böngészés<span class="sr-only">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Filmajánló</a> <!--TODO Filmajánló route -->
+                    <a class="nav-link" href="#">Filmajánló</a> <!--TODO Filmajánló route -->
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">
+            <form method="get" action="{{route('movie.search')}}" class="form-inline my-2 my-lg-0">
+
+                <input value="{{ old('keyword') }}" name="keyword" class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés</button>
             </form>
         </div>
         {{--<span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>--}}
+
         <div class="dropdown show order-1 order-md-last">
+
             <a id="navbarDropdown" class="text-right order-1 order-md-last" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>
+                @auth<span class="black">Üdv, {{Auth::user()->name}}</span> @endauth<i class="fas fa-user"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @guest
@@ -34,9 +37,10 @@
                 @else
 
                     <a class="dropdown-item" href="{{ route('profile') }}">Profil</a>
+                    <a class="dropdown-item" href="{{ route('profile.playlists') }}" >Lejátszási listáim</a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                         Kijelentkezés
                     </a>
 

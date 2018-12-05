@@ -31,7 +31,7 @@ class UserController extends Controller
         return view('profile.settings');
     }
 
-    /* Tönköly Andor készítette */
+
     public function playlists()
     {
         $playlists = Auth::user()->playlists;
@@ -46,5 +46,5 @@ class UserController extends Controller
         $user->save();
         return Redirect::to('profile');
     }
-    /* END Tönköly Andor */
+
 }

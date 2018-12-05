@@ -51,6 +51,14 @@ navbar-toggler:focus {
     font-weight: bold;
 }
 
+.movie-rating-fa{
+    color: #fff;
+    display: inline-block;
+    border-radius: 60px;
+    background-color: #22d381;
+    padding: 0.5em 0.5em;
+}
+
 .poster-wrapper {
 
     position: relative;
@@ -121,4 +129,7 @@ navbar-toggler:focus {
     border-radius: 10px;
 }
 
-
+.custom-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

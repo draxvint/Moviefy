@@ -26,8 +26,5 @@ class Playlist extends Model
         return ucfirst($value);
     }
 
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = strtolower($value);
-    }
+
 }

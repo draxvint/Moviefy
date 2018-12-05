@@ -27,7 +27,7 @@
                     <p>@foreach($movie->getGenres() as $genre)
                             {{$genre->getName()}}
                         @endforeach</p>
-                    <p>{{ $movie->getVoteAverage() }} ({{ $movie->getVoteCount() }})</p>
+                    <div class="align-text-bottom"><i class="fa fa-star movie-rating-fa"></i> {{ $movie->getVoteAverage() }} ({{ $movie->getVoteCount() }})</div>
                 </div>
 
                 {{--foreach($movie->getGenres() as $genre) {--}}
