@@ -30,6 +30,8 @@ Route::post('/profile/playlist/create', 'PlaylistController@store')->name('playl
 
 Route::get('/movie/search', 'MovieController@search')->name('movie.search');
 
+Route::get('/movie/recommend', 'MovieController@recommend')->name('movie.recommend');
+
 Route::get('/movie/{id}', 'MovieController@show')->name('movie.show');
 
 Route::get('/playlists', 'PlaylistController@index')->name('playlist.index');

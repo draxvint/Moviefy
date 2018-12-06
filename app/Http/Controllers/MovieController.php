@@ -9,6 +9,8 @@ use Tmdb\Repository\GenreRepository;
 use Tmdb\Repository\MovieRepository;
 use Illuminate\Support\Facades\Auth;
 use Tmdb\Repository\SearchRepository;
+use Illuminate\Support\Collection;
+
 
 class MovieController extends Controller
 {
@@ -28,6 +30,37 @@ class MovieController extends Controller
     {
         $movies =  $this->movies->getNowPlaying(['language' => 'hu-HU', 'region' => 'HU']);
         return view('home',['movies' => $movies]);
+    }
+
+    public function recommend(){
+        if(!Auth::user()){
+            return view('movie.recommend' ,['error' => 'Ahhoz, hogy elérd ezt a funkciót, regisztrálj, vagy jelentkezz be!']);
+        }
+        if(Auth::user()->playlists->isEmpty()){
+            return view('movie.recommend',['error' => "Nincs lejátszási lista!"]);   
+        }
+        $playlists = Auth::user()->playlists->all();
+        $not_empty = [];
+        foreach ($playlists as $playlist) {
+            if (!$playlist->movies->isEmpty()) {
+                array_push($not_empty, $playlist->id);
+            }
+        }
+        if(empty($not_empty)){
+            return view('movie.recommend',['error' => "Előbb vegyél fel egy filmet egy lejátszási listába!"]);
+        }
+        $playlists = Auth::user()->playlists->find($not_empty);
+        $playlist = $playlists->random();
+        
+        $movie = $playlist->movies->random();
+
+        $movies = $this->movies->getRecommendations($movie->id,['language' => 'hu-HU', 'region' => 'HU']);
+           
+        
+        
+
+       return view('movie.recommend',['movies' => $movies]);
+
     }
 
     public function show($tmdbid){
