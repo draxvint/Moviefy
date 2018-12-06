@@ -12,7 +12,7 @@
                     <a class="nav-link" href="{{ route('home') }}">Böngészés<span class="sr-only">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Filmajánló</a> <!--TODO Filmajánló route -->
+                    <a class="nav-link" href="{{route('movie.recommend')}}">Filmajánló</a>
                 </li>
             </ul>
             <form method="get" action="{{route('movie.search')}}" class="form-inline my-2 my-lg-0">

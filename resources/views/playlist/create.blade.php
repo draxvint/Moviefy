@@ -17,7 +17,7 @@
             @csrf
             <div class="form-group">
             <label for="name">Lista neve</label>
-            <input name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Adja meg a lista nevét">
+            <input name="name"  class="form-control" id="name" aria-describedby="nameHelp" placeholder="Adja meg a lista nevét" required>
         </div>
         <button type="submit" class="btn btn-primary">Létrehozás</button>
     </form>
