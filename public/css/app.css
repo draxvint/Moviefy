@@ -4,6 +4,7 @@ body {
     line-height: 1.4;
 }
 
+
 .navbar-brand{
     font-size: 1.5rem;
 }
@@ -70,8 +71,6 @@ navbar-toggler:focus {
 .poster-wrapper:hover {
     transition-delay: 0.2s;
     transition-timing-function: ease;
-    -webkit-transform: scale(1.02);
-    -ms-transform: scale(1.02); /* IE 9 */
     transform: scale(1.02);
 }
 

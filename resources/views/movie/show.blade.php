@@ -2,8 +2,7 @@
 @inject('image', 'Tmdb\Helper\ImageHelper')
 @section('content')
     <div class="container">
-        <div id="backdrop" class="row" style="background: url({{ $image->geturl($movie->getBackdropImage(), 'w1280') }})  no-repeat center center fixed/cover;
-            ">
+        <div id="backdrop" class="row" style="background: url({{ $image->geturl($movie->getBackdropImage(), 'w1280') }})  no-repeat center center fixed;background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; -ms-background-size: cover; ">
 
             {{--<img  src="{{ $image->getUrl($movie->getBackdropImage()) }}" class="img-fluid" alt="{{$movie->getTitle()}}" height="250px">--}}
 
@@ -48,6 +47,7 @@
                 <div class="row">
                     <div class="col-sm">
                         {{$movie->getRuntime()}} perc
+
                         @foreach($movie->getGenres() as $genre )
                             <a href="{{route('genre.show',['genre' =>$genre->getId()])}}">{{$genre->getName()}}</a> {{ ($loop->last ? '' : ',') }}
                         @endforeach

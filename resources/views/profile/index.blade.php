@@ -3,13 +3,11 @@
 @section('profile-content')
     <div class="col-md-9">
         <div class="card">
+            <div class="card-header">
+                <h4 class="float-left">Profilod</h4>
+            </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Your Profile</h4>
-                        <hr>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <form method="post" action="{{route('profile')}}">
