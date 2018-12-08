@@ -40,11 +40,28 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
+
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $user = Auth::user();
         $user->name = $request['name'];
         $user->email = $request['email'];
+        
+            $image = $request->file('avatar');
+            $name = str_slug($user->id).'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads/avatars');
+            $imagePath = $destinationPath. "/".  $name;
+            $image->move($destinationPath, $name);
+            $user->avatar = $name;
+        
+        
+
+        
+
+        
         $user->save();
-        return Redirect::to('profile');
+        return Redirect::route('profile.settings');
     }
 
 }
