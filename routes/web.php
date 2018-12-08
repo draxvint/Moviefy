@@ -18,7 +18,7 @@ Route::get('/', 'MovieController@index')->name('home');
 
 Route::get('/profile', 'UserController@index')->name('profile');
 
-Route::post('/profile', 'UserController@update');
+Route::post('/profile/settings', 'UserController@update');
 
 Route::get('/profile/settings', 'UserController@settings')->name('profile.settings');
 
