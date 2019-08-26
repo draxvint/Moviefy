@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Moviefy\Http\Controllers;
 
-use App\User;
+use Moviefy\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Moviefy;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -30,17 +30,17 @@ class User extends Authenticatable
 
     public function playlists()
     {
-        return $this->hasMany('App\Playlist');
+        return $this->hasMany('Moviefy\Playlist');
     }
 
 
     public function subscribedPlaylists()
     {
-        return $this->belongsToMany('App\Playlist','playlist_user','user_id');
+        return $this->belongsToMany('Moviefy\Playlist','playlist_user','user_id');
     }
 
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('Moviefy\Comment');
     }
 }

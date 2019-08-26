@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Moviefy;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,10 +28,10 @@ class Comment extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo('Moviefy\User', 'user_id');
     }
     public function movie()
     {
-        return $this->belongsTo('App\Movie','movie_id');
+        return $this->belongsTo('Moviefy\Movie','movie_id');
     }
 }

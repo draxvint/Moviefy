@@ -90,13 +90,15 @@
                             <h4>Színészek</h4>
                             <div class="row">
 
-                                @foreach($movie->getCredits()->getCast()->getCast() as $cast)
+                                @foreach($movie->getCredits()->getCast() as $cast)
                                 <div class="col-3">
 
                                     <div>
                                         <div style="height: 100px; width: 100px; border-radius: 50%; background-image: url('{{$image->geturl($cast->getProfileImage(),'w185')}}');
                                                 background-size: cover" class="float-left"></div>
                                     <p>{{$cast->getName()}}</p>
+                                        <p>Mint {{$cast->getCharacter()}}</p>
+
 
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Moviefy;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -53,7 +53,7 @@ class Person extends Model
 
     public function movies()
     {
-        return $this->belongsToMany('App\Movie');
+        return $this->belongsToMany('Moviefy\Movie');
     }
 }
 

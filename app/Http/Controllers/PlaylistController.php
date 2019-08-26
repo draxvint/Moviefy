@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Moviefy\Http\Controllers;
 
-use App\Movie;
-use App\Playlist;
+use Moviefy\Movie;
+use Moviefy\Playlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;

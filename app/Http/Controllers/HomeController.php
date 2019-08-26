@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Moviefy\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Tmdb\Laravel\Facades\Tmdb;

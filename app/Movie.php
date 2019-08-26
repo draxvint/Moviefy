@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Moviefy;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,12 +21,12 @@ class Movie extends Model
 
     public function playlists()
     {
-        return $this->belongsToMany('App\Playlist');
+        return $this->belongsToMany('Moviefy\Playlist');
     }
 
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('Moviefy\Comment');
     }
 
     public function getTitleAttribute($value)

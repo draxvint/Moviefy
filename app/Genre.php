@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Moviefy;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,6 +20,6 @@ class Genre extends Model
 
     public function movie()
     {
-        return $this->hasMany('App\Movie','movie_id');
+        return $this->hasMany('Moviefy\Movie','movie_id');
     }
 }

@@ -167,11 +167,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Moviefy\Providers\AppServiceProvider::class,
+        Moviefy\Providers\AuthServiceProvider::class,
+        // Moviefy\Providers\BroadcastServiceProvider::class,
+        Moviefy\Providers\EventServiceProvider::class,
+        Moviefy\Providers\RouteServiceProvider::class,
 
         // other service providers
 
